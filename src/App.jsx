@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -34,7 +34,7 @@ function App() {
     }
   };
 
-  const speak = (text) => {
+  const speak = useCallback((text) => {
     if (isSpeaking) {
       // If speech is already active, stop it
       window.speechSynthesis.cancel();
@@ -54,14 +54,7 @@ function App() {
     currentSpeech.current = utterance;
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true); // Mark speech as active
-  };
-
-  const stopSpeech = () => {
-    if (isSpeaking) {
-      window.speechSynthesis.cancel(); // Stop the current speech
-      setIsSpeaking(false);
-    }
-  };
+  }, [isSpeaking]);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -122,7 +115,7 @@ function App() {
     if (isVoiceMode) {
       speak("Voice integration activated. I'm listening...");
     }
-  }, [isVoiceMode]);
+  }, [isVoiceMode, speak]); // Add `speak` to the dependency array
 
   return (
     <div className="app">
