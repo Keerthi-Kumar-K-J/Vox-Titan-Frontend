@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# VoxTitan Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VoxTitan is a voice-enabled AI chatbot powered by Together.ai's advanced language models. This repository contains the frontend code for VoxTitan, built using React and deployed on Netlify.
+
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [Configuration](#configuration)
+  - [Environment Variables](#environment-variables)
+- [Deployment](#deployment)
+  - [Netlify](#netlify)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+## Features
+- **AI-Powered Chat**: Integrates with the VoxTitan backend for natural language processing.
+- **Voice Integration**: Supports voice-based interactions with wake-word detection.
+- **Code Display**: Displays code snippets with syntax highlighting.
+- **Text-to-Speech**: Converts AI responses into speech with enhanced TTS settings.
+- **Copy to Clipboard**: Allows users to copy AI responses to the clipboard.
+
+## Technologies Used
+- **React**: JavaScript library for building the user interface.
+- **React Markdown**: Renders markdown content (e.g., code blocks).
+- **React Syntax Highlighter**: Adds syntax highlighting to code snippets.
+- **Netlify**: Cloud platform for hosting the frontend.
+- **Web Speech API**: Enables voice recognition and text-to-speech functionality.
+
+## Setup
+### Prerequisites
+Before you begin, ensure you have the following installed:
+
+- **Node.js 16+**: [Download Node.js](https://nodejs.org/)
+- **npm**: Node package manager (comes with Node.js).
+- **Git**: [Download Git](https://git-scm.com/downloads)
+
+### Installation
+#### Clone the Repository:
+```sh
+git clone https://github.com/your-username/VoxTitan-Frontend.git
+cd VoxTitan-Frontend
+```
+
+#### Install Dependencies:
+```sh
+npm install
+```
 
 ## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
+Runs the app in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build` folder.
 
 ### `npm run eject`
+Ejects the configuration files if you need more customization (irreversible action).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuration
+### Environment Variables
+Create a `.env` file in the root directory and add the following variables:
+```sh
+REACT_APP_BACKEND_URL=https://vox-titan-backend.onrender.com
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
+### Netlify
+#### Sign Up:
+- Create an account on [Netlify](https://www.netlify.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Create a New Site:
+1. Connect your GitHub repository.
+2. Select the branch to deploy (e.g., `main`).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Configure Build Settings:
+- **Build command**: `npm run build`
+- **Publish directory**: `build/`
 
-## Learn More
+#### Deploy:
+- Netlify will automatically build and deploy your frontend.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
+We welcome contributions! Here’s how you can help:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Fork the Repository:
+```sh
+git clone https://github.com/your-username/VoxTitan-Frontend.git
+```
 
-### Code Splitting
+#### Create a Branch:
+```sh
+git checkout -b feature/your-feature-name
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Commit Your Changes:
+```sh
+git commit -m "Add your feature"
+```
 
-### Analyzing the Bundle Size
+#### Push to the Branch:
+```sh
+git push origin feature/your-feature-name
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Open a Pull Request:
+- Describe your changes and submit the PR.
 
-### Making a Progressive Web App
+## License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgements
+- **Together.ai**: For providing the AI models.
+- **React**: For the powerful and flexible frontend library.
+- **Netlify**: For seamless deployment and hosting.
 
-### Advanced Configuration
+## Contact
+For questions or feedback, feel free to reach out:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email**: 24ec069@kpriet.ac.in
+- **GitHub**: [Keerthi-Kumar-K-J](https://github.com/Keerthi-Kumar-K-J)
